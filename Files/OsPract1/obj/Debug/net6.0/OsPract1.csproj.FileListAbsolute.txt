@@ -1,0 +1,15 @@
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/bin/Debug/net6.0/OsPract1
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/bin/Debug/net6.0/OsPract1.deps.json
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/bin/Debug/net6.0/OsPract1.runtimeconfig.json
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/bin/Debug/net6.0/OsPract1.dll
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/bin/Debug/net6.0/OsPract1.pdb
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.csproj.AssemblyReference.cache
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.AssemblyInfoInputs.cache
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.AssemblyInfo.cs
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.csproj.CoreCompileInputs.cache
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.dll
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/refint/OsPract1.dll
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.pdb
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/OsPract1.genruntimeconfig.cache
+/Users/dmitrijkraev/Desktop/Учеба/Латыпов Practice/UniPract-main/Files/OsPract1/obj/Debug/net6.0/ref/OsPract1.dll
