@@ -1,4 +1,5 @@
 import hashlib
+from math import ceil
 import time
 import multiprocessing
 import threading
@@ -31,7 +32,7 @@ def sha256():
     if n_threads < 1:
         print("Введите количество потоков: ")
         n_threads = int(input)
-    per_thread = P // n_threads
+    per_thread =ceil(P / n_threads)
 
     threads = []
     start = 0
@@ -67,7 +68,7 @@ def md5():
     if n_threads < 1:
         print("Введите количество потоков: ")
         n_threads = int(input)
-    per_thread = P // n_threads
+    per_thread =ceil(P / n_threads)
 
     threads = []
     start = 0
