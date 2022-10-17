@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <persons>
   <person name="Dmitry">
     <company>Test</company>
@@ -7,5 +7,13 @@
   <person name="qwer">
     <company>qwerqwer</company>
     <age>200</age>
+  </person>
+  <person name="asd">
+    <company>asd</company>
+    <age>24</age>
+  </person>
+  <person name="qwe">
+    <company>qwe</company>
+    <age>25</age>
   </person>
 </persons>

@@ -32,11 +32,12 @@ namespace OsPract1
             foreach (var drive in drives)
             {
                 Console.WriteLine($"Имя: {drive.Name}");
+                Console.WriteLine($"Тип: {drive.DriveType}");
                 if (drive.IsReady)
                 {
                     Console.WriteLine($"Метка тома: {drive.VolumeLabel}");
                     Console.WriteLine($"Размер: {drive.TotalSize}");
-                    Console.WriteLine($"Тип ФС: {drive.DriveFormat}");
+                    Console.WriteLine($"Тип Файловой Системы: {drive.DriveFormat}");
                 }
                 Console.WriteLine();
             }
@@ -74,9 +75,22 @@ namespace OsPract1
             var path = "test.txt";
             Console.WriteLine("Запись строки \"Строка.\" в файл " + path + ".");
             SaveToFile(path, "Строка.");
-            Console.WriteLine("Чтение строки из файла " + path + ".");
+            Console.WriteLine("Чтение строки из файла " + path + ":");
+
+            if (!File.Exists(path))
+            {
+                Console.WriteLine("Файл не может быть прочитан");
+                return;
+            }
+
             Console.WriteLine(ReadFromFile(path));
             Console.WriteLine("Удаление файла " + path + ".");
+
+            if (!File.Exists(path))
+            {
+                Console.WriteLine("файл не найден");
+                return;
+            }
             File.Delete(path);
         }
 
@@ -85,6 +99,7 @@ namespace OsPract1
         {
             Console.WriteLine("3. Работа с форматом JSON.");
             Console.WriteLine("Чтение файла example.json.");
+
             var ex_j = ReadFromFile("example.json");
             var ex_p = JsonSerializer.Deserialize<Person>(ex_j);
             Console.WriteLine($"Имя человека из example.json: {ex_p.Name}");
@@ -97,12 +112,12 @@ namespace OsPract1
             Console.WriteLine("Введите имя человека:");
             var name = Console.ReadLine();
             if (name == null)
-                return;
+            return;
 
             Console.WriteLine("Введите компанию человека:");
             var company = Console.ReadLine();
             if (company == null)
-                return;
+            return;
 
             Console.WriteLine("Введите возраст человека:");
 
@@ -122,6 +137,11 @@ namespace OsPract1
             string json = JsonSerializer.Serialize<Person>(p);
             SaveToFile(path, json);
             Console.WriteLine("Чтение файла " + path + ".");
+            if (!File.Exists(path))
+            {
+                Console.WriteLine("файл не был сохранен");
+                return;
+            }
             Console.WriteLine(ReadFromFile(path));
             Console.WriteLine("Удаление файла " + path + ".");
             File.Delete(path);
@@ -149,12 +169,13 @@ namespace OsPract1
             Console.WriteLine("Введите имя человека:");
             var new_name = Console.ReadLine();
             if (new_name == null)
-                return;
+            return;
+                
 
             Console.WriteLine("Введите компанию человека:");
             var new_company = Console.ReadLine();
             if (new_company == null)
-                return;
+            return;            
 
             Console.WriteLine("Введите возраст человека:");
 
@@ -227,8 +248,11 @@ namespace OsPract1
                 Console.WriteLine($"Компания человека: {p.Company}");
             }
 
-            Console.WriteLine("Удаление файла " + path + ".");
-            File.Delete(path);
+            var pathcopy = "example_copy.xml";
+            Console.WriteLine("Копирование файла " + path + " в " + pathcopy +" для показа удаления XML файла.");
+            File.Copy(path,pathcopy);
+            Console.WriteLine("Удаление файла " + pathcopy + ".");
+            File.Delete(pathcopy);
         }
         // Сжатие файла в Zip
         static void Compress(string sourceFile, string compressedFile)
@@ -278,7 +302,10 @@ namespace OsPract1
             Console.WriteLine("Введите имя файла для сжатия:");
             var f_name = Console.ReadLine();
             if (f_name == null)
+            {
+                Console.WriteLine("введено пустое имя файла");
                 return;
+            }
 
             Compress(f_name, "out-zip.zip");
 
