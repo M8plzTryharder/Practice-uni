@@ -257,13 +257,16 @@ namespace OsPract1
         // Сжатие файла в Zip
         static void Compress(string sourceFile, string compressedFile)
         {
+            //поток для чтения исходного файла
             using (var sourceStream = new FileStream(sourceFile, FileMode.OpenOrCreate))
             {
+                //поток для записи сжатого файла
                 using (var targetStream = File.Create(compressedFile))
                 {
+                    //поток архивации
                     using (var compressionStream = new GZipStream(targetStream, CompressionMode.Compress))
                     {
-                        sourceStream.CopyTo(compressionStream);
+                        sourceStream.CopyTo(compressionStream);//копируем байты из одного потока в другой
                         Console.WriteLine($"Сжат файл: {sourceFile} -> {compressedFile}. Исходный размер: {sourceStream.Length}, сжатый размер: {targetStream.Length}.");
                     }
                 }
